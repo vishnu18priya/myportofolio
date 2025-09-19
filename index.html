@@ -1139,20 +1139,20 @@ nav a:hover {
         <div class="certificate-name">C Programming</div>
         <div class="certificate-issuer">Cisco</div>
       </div>
-            <button class="cert-arrow">→</button>
+            <button class="cert-arrow" onclick="openCpro()">→</button>
       <!-- hidden image -->
-      <img src="c_cisco.png" class="cert-img" style="display:none;" />
+      <!-- <img src="c_cisco.png" class="cert-img" style="display:none;" /> -->
     </div>
     <div class="certificate-item">
       <div>
         <div class="certificate-name">HTML</div>
         <div class="certificate-issuer">IT Specialist</div>
       </div>
-      <button class="cert-arrow">→</button>
+      <button class="cert-arrow" onclick="openITspe()">→</button>
       <!-- hidden image -->
-<img src="https://drive.google.com/uc?export=view&id=1LJuX-gE3LJ0q0kwrlPtAvy3KWIWYyOjc" 
+<!-- <img src="https://drive.google.com/uc?export=view&id=1LJuX-gE3LJ0q0kwrlPtAvy3KWIWYyOjc" 
      class="cert-img" 
-     style="display:none;" />
+     style="display:none;" /> -->
     </div>
 
     <div class="certificate-item">
@@ -1160,13 +1160,13 @@ nav a:hover {
         <div class="certificate-name">HTML Essentials </div>
         <div class="certificate-issuer">Cisco</div>
       </div>
-      <button class="cert-arrow" data-img="images/html-ess1.jpg">→</button>
+      <button class="cert-arrow" onclick="openhtmlcis()">→</button>
     </div>
 
     <div class="certificate-item">
       <div>
         <div class="certificate-name">CSS Essentials</div>
-        <div class="certificate-issuer">Cisco</div>
+        <div class="certificate-issuer" onclick="opencsscis() ">Cisco</div>
       </div>
       <button class="cert-arrow" data-img="images/css.jpg">→</button>
     </div>
@@ -1176,7 +1176,7 @@ nav a:hover {
         <div class="certificate-name">JS Essentials 1</div>
         <div class="certificate-issuer">Cisco</div>
       </div>
-      <button class="cert-arrow" data-img="images/js2.jpg">→</button>
+      <button class="cert-arrow" onclick="openjscis()">→</button>
     </div>
 
     <div class="certificate-item">
@@ -1184,7 +1184,7 @@ nav a:hover {
         <div class="certificate-name">JS Essentials 2</div>
         <div class="certificate-issuer">Cisco</div>
       </div>
-      <button class="cert-arrow" data-img="images/js2.jpg">→</button>
+      <button class="cert-arrow" onclick="openjs2cis()">→</button>
     </div>
         <div class="certificate-item">
       <div>
@@ -1196,7 +1196,6 @@ nav a:hover {
   </div>
     </div>
 </section>
-
 <!-- Certificate Image Modal -->
 <div id="cert-modal" class="modal" style="display: none;">
   <span class="close-modal">&times;</span>
@@ -1355,9 +1354,26 @@ nav a:hover {
 
   // Open Resume (PNG version)
   function openCV() {
-    window.open("resume.png", "_blank"); // 👈 replace with your file name
+    window.open("resume.pdf", "_blank"); // 👈 replace with your file name
   }
-
+      function openCpro(){
+    window.open("Partner-_CLA_-_Programming_Essentials_in_C_certificate_23p31a0446-acet-ac-in_baa80633-998e-435c-87a5-deb525d49d32 (1).pdf", "_blank");
+  }
+  function openITspe(){
+    window.open(".pdf", "_blank");
+  }
+  function openhtmlcis(){
+    window.open("_certificate_23p31a0446-acet-ac-in_d8b5b9e5-9dd6-4b81-b01a-22c944ac5e77.pdf", "_blank");
+  }
+  function opencsscis(){
+    window.open("_certificate_23p31a0446-acet-ac-in_dde891f3-2f02-4d5c-84c2-831d2227b3a5.pdf", "_blank");
+  }
+  function openjscis(){
+    window.open("JavaScript_Essentials_1_certificate_23p31a0446-acet-ac-in_b6daa35d-cb94-4851-9410-ba55408cfb24.pdf", "_blank");
+  }
+  function openjs2cis(){
+    window.open("JavaScript_Essentials_2_certificate_23p31a0446-acet-ac-in_d7af45de-2b3a-4231-bd92-817a22b9d3df.pdf", "_blank");
+  }
   // Certificates Modal
   const modal = document.createElement("div");
   modal.classList.add("modal");
