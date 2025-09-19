@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(35, 31, 31); */
+}
+.header {
+    width: 100%;
+    height: 130px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between; /* pushes left to start & right to end */
+    align-items: center;           /* vertically centers content */
+    padding: 0 0px;               /* optional: add space on both sides */
+}
+
+.right{
+    font-size: 30px;
+    font-weight: 200;
+    margin: 25px;
+}
+.left{
+    font-size: 20px;
+    display: flex;
+    gap: 60px;
+}

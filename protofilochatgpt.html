@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protofilo</title>
+</head>
+<body>
+    <!--PROTOFILO-->
+    <!-- <div class="container">
+        <div class="page1">
+            <div class="top">
+                <div id="about"></div>
+            </div>
+        </div>
+    </div> -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Priya | Portfolio</title>
+  <style>
+    /* ---------- Global Styles ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f4f1e8;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background: #1e1e1e;
+      color: #f5f5f5;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #6B7C52;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+    button:hover {
+      transform: scale(1.1);
+      background: #9CAF88;
+    }
+
+    /* ---------- Hero Section ---------- */
+    header.hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #333;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* ---------- About Section ---------- */
+    #about {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 180px;
+      border-radius: 50%;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* ---------- Skills ---------- */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    .skill {
+      padding: 15px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    /* ---------- Projects ---------- */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .project-card {
+      width: 250px;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* ---------- Fade-In Scroll ---------- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- Contact ---------- */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.05);
+      margin-top: 50px;
+    }
+
+    #theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button id="theme-toggle">🌙 Toggle Theme</button>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Hi, I'm Priya</h1>
+    <p class="typing">Web Developer | Designer | Innovator</p>
+    <br>
+    <button onclick="scrollToProjects()">View My Work</button>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="fade-in">
+    <img src="https://via.placeholder.com/180" alt="Priya" class="profile-pic">
+    <div>
+      <h2>About Me</h2>
+      <p>
+        I'm a passionate developer who loves building interactive web experiences with HTML, CSS, and JavaScript.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Python</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">Portfolio Website</div>
+      <div class="project-card">E-commerce UI</div>
+      <div class="project-card">Guest Management System</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>© 2025 Priya | All Rights Reserved</footer>
+
+  <script>
+    // Fade-in on scroll
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".fade-in").forEach(el => {
+        let rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add("show");
+        }
+      });
+    });
+
+    // Smooth scroll to projects
+    function scrollToProjects() {
+      document.getElementById("projects").scrollIntoView({ 
+        behavior: "smooth" 
+      });
+    }
+
+    // Dark / Light Mode Toggle
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
+
+</body>
+</html>
